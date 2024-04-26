@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MiComponente from './MiComponente';
 
 function App() {
   return (
@@ -9,14 +10,8 @@ function App() {
         <p>
           Welcome to my first App
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      {/* Import Component */}
+      <MiComponente />      
       </header>
     </div>
   );
