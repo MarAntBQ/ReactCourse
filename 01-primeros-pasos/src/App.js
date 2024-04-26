@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import MiComponente from './MiComponente';
+import { MiComponente } from './MiComponente';
+import { SegundoComponente } from './SegundoComponente';
 
 function App() {
   return (
@@ -10,8 +11,11 @@ function App() {
         <p>
           Welcome to my first App
         </p>
-      {/* Import Component */}
-      <MiComponente />      
+        <div className='componentes'>
+          <SegundoComponente />
+          <hr/>
+          <MiComponente />
+        </div>
       </header>
     </div>
   );
