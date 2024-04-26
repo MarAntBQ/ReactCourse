@@ -1,0 +1,4 @@
+// Execute create react app
+npx create-react-app 01-primeros-pasos
+// Create a component using the file name
+rafc
