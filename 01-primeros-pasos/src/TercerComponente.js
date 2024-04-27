@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from "prop-types";
 
 export const TercerComponente = ({name, lastname, userInfo}) => {
   return (
@@ -9,4 +10,10 @@ export const TercerComponente = ({name, lastname, userInfo}) => {
       <p>Your phone {userInfo.phone}</p>
     </div>
   )
+}
+
+TercerComponente.propTypes = {
+  name: PropTypes.string,
+  lastname: PropTypes.string,
+  userInfo: PropTypes.object,
 }
