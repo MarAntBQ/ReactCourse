@@ -13,7 +13,12 @@ export const TercerComponente = ({name, lastname, userInfo}) => {
 }
 
 TercerComponente.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   lastname: PropTypes.string,
   userInfo: PropTypes.object,
+}
+
+TercerComponente.defaultProps = {
+  name: "Antonio",
+  lastname: "Admin"
 }
