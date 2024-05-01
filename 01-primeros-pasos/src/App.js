@@ -3,6 +3,7 @@ import './App.css';
 import { MiComponente } from './MiComponente';
 import { SegundoComponente } from './SegundoComponente';
 import { TercerComponente } from './TercerComponente';
+import { EventosComponente } from './EventosComponente';
 
 function App() {
   let user_info = {
@@ -17,6 +18,8 @@ function App() {
           Welcome to my first React App
         </p>
         <div className='componentes'>
+          <EventosComponente/>
+          <hr/>
           <TercerComponente
           name = "Marco Antonio"
           lastname = "Bustillos"
