@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#events__box {
+  width: 200px;
+  height: 200px;
+  border: 5px solid white;
+  background-color: lightblue;
+  margin: 0 auto;
+  text-align: center;
+  color: #4444;
+  line-height: 200px;
+}

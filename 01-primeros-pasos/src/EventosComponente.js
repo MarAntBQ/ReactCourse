@@ -9,17 +9,27 @@ export const EventosComponente = () => {
     console.log(e)
     alert(`You clicked twice`)
   }
+  const mouseEnter = (e, action) => {
+    console.log(`The Mouse is ${action}`)
+  }
+
   return (
     <div>
       <h1>Events on React</h1>
       <p>
         {/* Click Events */}
-        <button onClick={ e => isClicked(e, "Marco Antonio") }>Click Here # 1</button>
+        <button onClick={ e => isClicked(e, "Marco Antonio") }>One Click</button>
       </p>
       <p>
         {/* Click Events doble */}
-        <button onDoubleClick={ dobleClick }>Click Here # 2</button>
+        <button onDoubleClick={ dobleClick }>Double Click</button>
       </p>
+      <div id="events__box"
+        onMouseEnter={ e => mouseEnter(e, "entering") }
+        onMouseLeave={ e => mouseEnter(e, "leaving") }
+      >
+        Move the mouse over this!!
+      </div>
     </div>
   )
 }
