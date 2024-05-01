@@ -13,6 +13,14 @@ export const EventosComponente = () => {
     console.log(`The Mouse is ${action}`)
   }
 
+  const isInside = e => {
+    console.log(`You're on focus of the input`);
+  }
+
+  const outSide = e => {
+    console.log(`You're outside "blur"`)
+  }
+
   return (
     <div>
       <h1>Events on React</h1>
@@ -30,6 +38,12 @@ export const EventosComponente = () => {
       >
         Move the mouse over this!!
       </div>
+      <p>
+        <input type="text"
+          onFocus={ isInside }
+          onBlur={ outSide }
+          placeholder='Enter your name'/>
+      </p>
     </div>
   )
 }
