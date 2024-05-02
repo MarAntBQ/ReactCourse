@@ -1,0 +1,14 @@
+1. Create a component
+
+2. Receive a prop with the current year
+
+3. Use functions JS to get the year
+
+4. Use States and events to have 2 buttons 
+ - Next year
+ - Last year
+ - Show in all the moment the year on screen
+
+5. Validate the year should be a number and required
+
+6. Change the year using useState and change it

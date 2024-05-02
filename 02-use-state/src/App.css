@@ -37,9 +37,13 @@
   }
 }
 
-.user-name {
+.label {
   background: lightblue;
   color: #444;
   padding: 5px;
   border-radius: 5px;
+}
+.label--green {
+  background: green;
+  color: white;
 }

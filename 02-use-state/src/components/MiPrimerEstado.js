@@ -11,7 +11,7 @@ export const MiPrimerEstado = () => {
   return (
     <div>
       <h3>Component: MiPrimerEstado</h3>
-      <strong className='user-name'>
+      <strong className='label'>
         {nombre}
       </strong>
       &nbsp;
