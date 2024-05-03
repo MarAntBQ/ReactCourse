@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { AvisoComponent } from './AvisoComponent';
 
 export const PruebasComponent = () => {
   const [usuario, setUsuario] = useState("Marco Antonio");
@@ -20,7 +21,7 @@ export const PruebasComponent = () => {
   // Making only when the user is changed
   useEffect(() => {
     console.log('The component was changed the User');
-    setContador(contador + 1);
+    setContador(contador => contador + 1);
   }, [fecha, usuario]);
 
   return (
@@ -36,6 +37,7 @@ export const PruebasComponent = () => {
         &nbsp;
         <button onClick={modFecha}>Change</button>
       </div>
+      {usuario === "Marco" && <AvisoComponent contador = {contador} /> }
     </div>
   )
 }
