@@ -43,9 +43,22 @@ export const AjaxComponent = () => {
       "avatar": "https://reqres.in/img/faces/12-image.jpg"
     }]);
   }
-  
+
+  const getUsuariosAjax = () => {
+    fetch('https://reqres.in/api/users?page=1')
+      .then(response => response.json())
+      .then(
+        resultado_final => {
+          setUsuarios(resultado_final.data)
+        }, error => {
+          console.log(error)
+        }
+      )
+  }
+
   useEffect(() => {
-    getUsuariosEstaticos();
+    //getUsuariosEstaticos();
+    getUsuariosAjax();
   }, []);
 
   
