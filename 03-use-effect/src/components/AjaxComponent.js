@@ -56,9 +56,18 @@ export const AjaxComponent = () => {
       )
   }
 
+  const getUsuariosAjaxAW = async() => {
+    const peticion = await fetch('https://reqres.in/api/users?page=2');
+    const {data} = await peticion.json();
+
+    console.log(data)
+    setUsuarios(data)
+  }
+
   useEffect(() => {
     //getUsuariosEstaticos();
-    getUsuariosAjax();
+    //getUsuariosAjax();
+    getUsuariosAjaxAW();
   }, []);
 
   
