@@ -4,6 +4,10 @@ export const AjaxComponent = () => {
 
   const [usuarios, setUsuarios] = useState([]);
 
+  const [cargando, setCargando] = useState(true);
+
+  const [errores, setErrores] = useState("");
+
   const getUsuariosEstaticos = () => {
     setUsuarios([{
       "id": 1,
@@ -56,12 +60,19 @@ export const AjaxComponent = () => {
       )
   }
 
-  const getUsuariosAjaxAW = async() => {
-    const peticion = await fetch('https://reqres.in/api/users?page=2');
-    const {data} = await peticion.json();
-
-    console.log(data)
-    setUsuarios(data)
+  const getUsuariosAjaxAW = () => {
+    setTimeout(async() => {
+      try {
+        const peticion = await fetch('https://reqres.in/api/users?page=1');
+        const {data} = await peticion.json();
+        console.log(data);
+        setUsuarios(data);
+        setCargando(false);
+      } catch (error) {
+        console.log(error.message);
+        setErrores(error.message);
+      }
+    }, 1000);
   }
 
   useEffect(() => {
@@ -70,16 +81,34 @@ export const AjaxComponent = () => {
     getUsuariosAjaxAW();
   }, []);
 
-  
-  return (
-    <div>
-      <h2>User List by Ajax</h2>
-      <ol className='usuarios'>
-        {usuarios.map(usuario => {
-          return <li key={usuario.id}>{usuario.first_name} {usuario.last_name}</li>
-        })
-        }
-      </ol>
-    </div>
-  )
+  if(errores !== "") {
+    return(
+      <div className='errores'>
+        {errores}
+      </div>
+    )
+  } else  if (cargando === true) {
+    return(
+      <div className='cargando'>
+        Cargando Datos ...
+      </div>
+    )
+
+  } else if(cargando === false && errores === "") {
+    return (
+      <div>
+        <h2>User List by Ajax</h2>
+        <ol className='usuarios'>
+          {usuarios.map(usuario => {
+            return <li key={usuario.id}>
+                          <img src={usuario.avatar} width="20"  alt={usuario.first_name + ' Profile Picture'}/>
+                          &nbsp;
+                          {usuario.first_name} {usuario.last_name}
+                        </li>
+          })
+          }
+        </ol>
+      </div>
+    )
+  }  
 }
