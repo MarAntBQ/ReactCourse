@@ -1,5 +1,5 @@
 # Learning React practice by: Marco Antonio Bustillos Quiroz
-## System to handle the business logic in Marbust Technology Company
+## Following Course to learn about React
 ---
 See it live: https://react.marantbq.dev/
 ---
