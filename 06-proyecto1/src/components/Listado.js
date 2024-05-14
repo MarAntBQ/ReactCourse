@@ -39,7 +39,7 @@ export const Listado = ({listadoState, setListadoState}) => {
             <button className="delete" onClick={() => borrarPeli(peli.id)}>Borrar</button>
             {/* Appears Edit Form */}
             {editar === peli.id && (
-            <FormularioEditar />
+            <FormularioEditar peli={peli} />
             )}
           </article>
         );
