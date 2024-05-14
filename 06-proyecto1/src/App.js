@@ -33,7 +33,10 @@ function App() {
         </section>
 
         <aside className="lateral">
-            <Buscador/>
+            <Buscador
+                listadoState={listadoState}
+                setListadoState={setListadoState}
+            />
 
             <AddPelicula
                 setListadoState={setListadoState}
