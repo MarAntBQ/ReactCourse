@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const FormularioEditar = ({peli, conseguirPeliculas}) => {
+export const FormularioEditar = ({peli, conseguirPeliculas, setEditar, setListadoState}) => {
   const titulo_componente = "Editar movie";
 
   const guardarEdicion = (e, id) => {
@@ -24,8 +24,12 @@ export const FormularioEditar = ({peli, conseguirPeliculas}) => {
     // Update localStorage item with index and new info
     console.log(peli_updated)
     pelis_saved[indice] = peli_updated;
-    console.log(pelis_saved)
-    //localStorage.setItem('pelis', JSON.stringify(pelis_saved));
+
+    // Update useState
+    setListadoState(pelis_saved);
+    setEditar(0);
+    // Save in localStorage
+    localStorage.setItem('pelis', JSON.stringify(pelis_saved));
 
   };
 

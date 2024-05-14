@@ -39,8 +39,11 @@ export const Listado = ({listadoState, setListadoState}) => {
             <button className="delete" onClick={() => borrarPeli(peli.id)}>Borrar</button>
             {/* Appears Edit Form */}
             {editar === peli.id && (
-            <FormularioEditar peli={peli}
-            conseguirPeliculas = {conseguirPeliculas}
+            <FormularioEditar
+              peli={peli}
+              conseguirPeliculas = {conseguirPeliculas}
+              setEditar={setEditar}
+              setListadoState={setListadoState}
             />
             )}
           </article>
