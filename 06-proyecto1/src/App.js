@@ -1,8 +1,10 @@
 import { Listado } from "./components/Listado";
 import { AddPelicula } from "./components/AddPelicula";
 import { Buscador } from "./components/Buscador";
+import { useState } from "react";
 
 function App() {
+    const [listadoState, setListadoState] = useState([]);
   return (
     <div className="layout">
 
@@ -24,13 +26,18 @@ function App() {
         </nav>
 
         <section id="content" className="content">
-            < Listado/>
+            < Listado
+                listadoState={listadoState}
+                setListadoState={setListadoState}
+            />
         </section>
 
         <aside className="lateral">
             <Buscador/>
 
-            <AddPelicula/>
+            <AddPelicula
+                setListadoState={setListadoState}
+            />
         </aside>
 
         <footer className="footer">
