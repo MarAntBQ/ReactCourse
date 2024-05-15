@@ -1,0 +1,2 @@
+// Code npm react router  
+npm install react-router@6 react-router-dom@6
