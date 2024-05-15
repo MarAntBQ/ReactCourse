@@ -29,7 +29,7 @@ export const AddPelicula = ({setListadoState}) => {
 
     // Update Main List
     setListadoState(elementos => {
-      return [...elementos, peli];
+      return [...(elementos || []), peli];
     });
 
     // Save in Local Storage
