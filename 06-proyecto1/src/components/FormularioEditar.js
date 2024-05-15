@@ -22,7 +22,6 @@ export const FormularioEditar = ({peli, conseguirPeliculas, setEditar, setListad
 
 
     // Update localStorage item with index and new info
-    console.log(peli_updated)
     pelis_saved[indice] = peli_updated;
 
     // Update useState

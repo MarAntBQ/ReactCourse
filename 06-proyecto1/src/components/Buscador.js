@@ -19,8 +19,6 @@ export const Buscador = ({listadoState, setListadoState}) => {
       setNoEncontrado(false);
     }
 
-    console.log(pelis_encontradas);
-
     setListadoState(pelis_encontradas);
   }
 
