@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, NavLink, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, NavLink, BrowserRouter, Navigate } from 'react-router-dom';
 import { Inicio } from '../components/Inicio';
 import { Contacto } from '../components/Contacto';
 import { Articulos } from '../components/Articulos';
@@ -20,6 +20,7 @@ export const RouterPrincipal = () => {
           <Route path='/persona/:nombre/:apellido' element={<Persona/>}></Route>
           <Route path='/persona/:nombre' element={<Persona/>}></Route>
           <Route path='/persona/' element={<Persona/>}></Route>
+          <Route path='/redirigir' element={<Navigate to="/persona/Marco/Bustillos"/>}></Route>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </main>
