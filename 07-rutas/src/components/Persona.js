@@ -6,7 +6,8 @@ export const Persona = () => {
   //console.log(parametros)
   return (
     <div>
-      <h1>Página de Persona: {nombre+' '+apellido}</h1>
+      {!nombre && <h1>No hay ninguna persona que mostrar</h1>}
+      {nombre && <h1>Página de Persona: {nombre} {apellido}</h1>}
     </div>
   )
 }
