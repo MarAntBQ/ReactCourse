@@ -27,6 +27,11 @@ export const Header = () => {
                 className={({isActive}) => isActive ? "activado" : ""}
               >Persona</NavLink>
             </li>
+            <li>
+              <NavLink to="/panel"
+                className={({isActive}) => isActive ? "activado" : ""}
+              >Panel Control</NavLink>
+            </li>
           </ul>
         </nav>
       </header>
