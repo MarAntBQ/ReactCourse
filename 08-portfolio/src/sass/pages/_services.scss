@@ -1,0 +1,30 @@
+.path-services {
+  .services {
+    &__intro {
+      padding: 100px 10px;
+      // background: $color4;
+      // color: white;
+
+      h1 {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      hr {
+        margin-bottom: 15px;
+      }
+    }
+    &__list {
+      h1 {
+        text-align: center;
+      }
+      .services-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__item {
+          margin: 10px;
+        }
+      }
+    }
+  }
+}

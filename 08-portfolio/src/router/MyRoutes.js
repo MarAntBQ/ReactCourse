@@ -14,7 +14,7 @@ export const MyRoutes = () => {
   return (
     <BrowserRouter>
     <Header/>
-    <main>
+    <main >
       <div className='main__wrapper'>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
