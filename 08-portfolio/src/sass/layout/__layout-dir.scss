@@ -1,0 +1,19 @@
+// LAYOUT - DIRECTORY
+
+// Body
+@import 'body';
+// Header
+@import 'header';
+// Main
+@import 'main';
+// Footer
+@import 'footer';
+
+
+.header,
+.main,
+.footer {
+  &__wrapper {
+    @include wrapper-settings;
+  }
+}
