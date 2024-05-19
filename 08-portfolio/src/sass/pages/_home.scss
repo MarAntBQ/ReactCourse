@@ -2,8 +2,19 @@
   .home {
     &__banner {
       padding: 100px 0;
-      
+      background: $color1;
+      color: $color3;
       text-align: center;
+      h1 {
+        color: $color2;
+      }
+      a {
+        color: $color2;
+        transition: 0.3s;
+        &:hover {
+          color: skyblue;
+        }
+      }
     }
   }
 }

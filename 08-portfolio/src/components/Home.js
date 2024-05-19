@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ProjectsList } from './ProjectsList'
 
 export const Home = () => {
   return (
@@ -9,6 +10,7 @@ export const Home = () => {
         <h2>Full Stack Developer</h2>
         <p><Link to="/contact">Contact me</Link></p>
       </div>
+      <ProjectsList limitNum="2"/>
     </div>
   )
 }
