@@ -1,5 +1,19 @@
 .btn {
+  margin: 5px 0;
+  background: $color1;
+  font-weight: bold;
+  max-width: 250px;
+  padding: 10px;
+  display: block;
+  color: $color3;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 3px solid $color3;
+  text-align: center;
   &:hover {
+    background: $color2;
+    color: $color1;
   }
   &--secondary {
     &:hover {
@@ -8,5 +22,9 @@
   &--terciary {
     &:hover {
     }
+  }
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

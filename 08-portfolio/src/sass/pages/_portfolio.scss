@@ -34,6 +34,9 @@
               transform: scale(1.1);
             }
           }
+          a {
+            border-color: $color2;
+          }
         }
         .mask {
           margin-bottom: 5px;
@@ -57,6 +60,7 @@
           text-decoration: none;
           border-radius: 15px;
           transition: 0.3s;
+          border: 3px solid $color3;
           &:hover {
             background: $color2;
             color: $color1;
