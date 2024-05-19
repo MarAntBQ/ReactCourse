@@ -6,7 +6,7 @@ export const Header = () => {
     <header className='header'>
       <div className='header__wrapper'>
         <nav className='header__nav'>
-          <NavLink to="/" className='header__logo'><img src="/img/header/logo.png" alt='Logo'/></NavLink>
+          <NavLink to="/" className='header__logo'><img src={`${process.env.PUBLIC_URL}/img/header/logo.png`} alt='Logo'/></NavLink>
           <ul className='header__ul'>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>

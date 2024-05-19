@@ -10,7 +10,7 @@ export const ProjectsList = ({limitNum = 10}) => {
           return(
           <article key={work.id}>
             <div className='mask'>
-              <img src={"/img/projects/"+work.id+".jpg"} alt={work.name+" image"}/>
+              <img src={`${process.env.PUBLIC_URL}/img/projects/${work.id}.jpg`} alt={`${work.name} project screen shoot`} />
             </div>
             <h2>{work.name}</h2>
             <h3>{work.techstack}</h3>

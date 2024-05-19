@@ -22,7 +22,7 @@ export const Project = () => {
       <div className='project__intro'>
         <h1>{project.name}</h1>
         <hr/>
-        <img src={"/img/projects/"+params.id+".jpg"} alt={params.id+" image"}/>
+        <img src={`${process.env.PUBLIC_URL}/img/projects/${params.id}.jpg`} alt={`${params.name} project screen shoot`} />
         <hr/>
         <p>{project.description}</p>
         <ul>

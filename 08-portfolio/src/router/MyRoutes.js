@@ -13,7 +13,7 @@ import { Footer } from '../layout/Footer';
 
 export const MyRoutes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/project-02-portfolio">
     <Header/>
     <main >
       <div className='main__wrapper'>
