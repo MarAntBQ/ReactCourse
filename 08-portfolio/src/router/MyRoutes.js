@@ -29,6 +29,5 @@ export const MyRoutes = () => {
     </main>
     <Footer/>
     </BrowserRouter>
-    
   )
 }

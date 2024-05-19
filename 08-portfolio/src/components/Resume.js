@@ -9,8 +9,6 @@ export const Resume = () => {
         <p>As a Full Stack Web Developer this is my comprehensive professional resume, journey, highlighting expertise, dedication, and versatility. My track record of success is underscored by a commitment to excellence, problem-solving acumen, and a collaborative spirit. By harnessing these qualities, I bring value to any team, ensuring optimal project outcomes and driving organizational success. With me, companies gain a reliable, adaptable, and forward-thinking professional poised to make a meaningful impact.</p>
       </div>
       <div className='resume__work-experience'>
-        <h1>Work Experience</h1>
-        <hr/>
         <article>
           <h3>Marbust Technolology Company</h3>
           <h2>FULL STACK DEVELOPER</h2>

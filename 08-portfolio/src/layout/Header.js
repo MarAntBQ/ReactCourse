@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../img/header/logo.png';
 import { NavLink } from 'react-router-dom'
 
 export const Header = () => {
@@ -7,7 +6,7 @@ export const Header = () => {
     <header className='header'>
       <div className='header__wrapper'>
         <nav className='header__nav'>
-          <NavLink to="/" className='header__logo'><img src={Logo}/></NavLink>
+          <NavLink to="/" className='header__logo'><img src="/img/header/logo.png" alt='Logo'/></NavLink>
           <ul className='header__ul'>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
