@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.my-box {
+  border: 3px solid green;
+  padding: 10px;
+}
+.my-box--green {
+  background: green;
+  color: white;
+}
