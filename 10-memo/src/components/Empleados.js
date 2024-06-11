@@ -1,12 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const Empleados = React.memo(
-  () => {
+({pagina}) => {
+  const [empleados, setEmpleados] = useState([]);
     
-    console.log('Se ha vuelto a renderizar Empleados');
+    useEffect(() => {
+      getEmployees(pagina);
+    }, [pagina]);
     
+    const getEmployees = async (p) => {
+      const url = 'https://reqres.in/api/users?page='+p;
+      const peticion = await fetch(url);
+      // I'm destructuring the data property from the response object and saving it in a variable called empleados
+      const {
+        data: empleados
+      } = await peticion.json();
+
+      setEmpleados(empleados);
+    }
+
     return (
-      <div>Empleados</div>
+      <>
+        <p>Showing page number: {pagina}</p>
+        <ul className='empleados'>
+          { empleados.length >= 1 &&
+            empleados.map((empleado) => {
+              return <li key={empleado.id}>{empleado.first_name + ' ' + empleado.last_name}</li>
+            }
+            )}
+        </ul>
+      </>
     )
-  }
+}
 )
