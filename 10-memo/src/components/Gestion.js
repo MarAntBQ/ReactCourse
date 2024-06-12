@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Empleados } from './Empleados'
 
 export const Gestion = () => {
@@ -6,11 +6,14 @@ export const Gestion = () => {
   const [nombre, setNombre] = useState('')
   const [pagina, setPagina] = useState(1);
 
-  console.log('This component is being rendered')
-
+  
   const asignarGestor = (e) => {
     setNombre(e.target.value);
-  }
+    }
+    
+  useEffect(() => {
+    console.log('This component is being rendered')
+  }, [nombre, pagina])
 
   return (
     <div>

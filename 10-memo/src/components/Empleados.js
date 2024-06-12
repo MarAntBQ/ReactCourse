@@ -4,9 +4,14 @@ export const Empleados = React.memo(
 ({pagina}) => {
   const [empleados, setEmpleados] = useState([]);
     
-    useEffect(() => {
+  useEffect(() => {
       getEmployees(pagina);
-    }, [pagina]);
+  }, [pagina]);
+  useEffect(() => {
+    console.log('Employees has been updated!');
+  },[empleados]);
+
+  
     
     const getEmployees = async (p) => {
       const url = 'https://reqres.in/api/users?page='+p;
@@ -18,7 +23,6 @@ export const Empleados = React.memo(
 
       setEmpleados(empleados);
     }
-
     return (
       <>
         <p>Showing page number: {pagina}</p>
