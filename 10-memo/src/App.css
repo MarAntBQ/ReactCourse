@@ -37,10 +37,29 @@
   }
 }
 
+.tareas-container {
+ width: 80%;
+}
 
-input[type="text"] {
+
+input[type="text"],
+input[type="submit"] {
   width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
+
+input[type="submit"] {
+  margin-left: 10px;
+  width: 20%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 0;
+  font-weight: bold;
+  &:hover {
+    background: green;
+    color: white;
+  }
+}
+
