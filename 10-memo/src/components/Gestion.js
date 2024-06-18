@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Empleados } from './Empleados'
 
 export const Gestion = () => {
@@ -13,7 +13,11 @@ export const Gestion = () => {
     
   useEffect(() => {
     console.log('This component is being rendered')
-  }, [nombre, pagina])
+  }, [nombre, pagina]);
+
+  const mostrarMensaje = useCallback(() => {
+    console.log('I am a message from the Empleados component');
+  }, [pagina]);
 
   return (
     <div>
@@ -23,7 +27,7 @@ export const Gestion = () => {
       <p>Los usuarios son gestionados por {nombre} vienen de jsonplaceholder....</p>
       <button onClick={() => {setPagina(1)}}>Page 1</button>
       <button onClick={() => {setPagina(2)}}>Page 2</button>
-      <Empleados pagina={pagina} />
+      <Empleados pagina={pagina} mensaje={mostrarMensaje} />
     </div>
   )
 }

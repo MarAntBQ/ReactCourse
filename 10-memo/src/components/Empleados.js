@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
 export const Empleados = React.memo(
-({pagina}) => {
+({pagina, mensaje}) => {
   const [empleados, setEmpleados] = useState([]);
     
   useEffect(() => {
       getEmployees(pagina);
+      mensaje();
   }, [pagina]);
   useEffect(() => {
     console.log('Employees has been updated!');
@@ -23,6 +24,7 @@ export const Empleados = React.memo(
 
       setEmpleados(empleados);
     }
+
     return (
       <>
         <p>Showing page number: {pagina}</p>
