@@ -1,6 +1,19 @@
 import React from 'react'
 
 export const MisJuegos = () => {
+
+  const conseguirDatos = e => {
+    e.preventDefault();
+
+    let juego = {
+      id: new Date().getTime(),
+      titulo: e.target.game.value,
+      descripcion: e.target.description.value
+    }
+
+    console.log(juego);
+  }
+
   return (
     <div>
       <h1> Estos son mis Vídeo Juegos</h1>
@@ -11,7 +24,7 @@ export const MisJuegos = () => {
         <li>Monopoli</li>
       </ul>
       <h3>Add Game</h3>
-      <form>
+      <form onSubmit={conseguirDatos}>
         <input type="text" name="game" placeholder='Titulo' />
         <textarea name="description" placeholder='Descripción'></textarea>
         <button type="submit">Add Game</button>
