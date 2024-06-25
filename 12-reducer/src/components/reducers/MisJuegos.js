@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { JuegoReducer } from './JuegoReducer';
+
+const init  = () => {
+  return JSON.parse(localStorage.getItem('juegos')) || [];
+}
 
 export const MisJuegos = () => {
+
+  const [juegos, dispatch] = React.useReducer(JuegoReducer, [], init);
+
+  useEffect(() => {
+    localStorage.setItem('juegos', JSON.stringify(juegos));
+  }, [juegos]);
 
   const conseguirDatos = e => {
     e.preventDefault();
