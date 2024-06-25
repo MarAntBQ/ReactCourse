@@ -23,16 +23,26 @@ export const MisJuegos = () => {
     }
 
     console.log(juego);
+
+    const acccion = {
+      type: 'crear',
+      payload: juego
+    }
+    dispatch(acccion);
+
+    console.log(juegos);
   }
 
   return (
     <div>
       <h1> Estos son mis Vídeo Juegos</h1>
-      <p>Número de vídeo Juegos: 15</p>
+      <p>Número de vídeo Juegos: {juegos.length}</p>
       <ul>
-        <li>Free Fire</li>
-        <li>Quake 3 Arena</li>
-        <li>Monopoli</li>
+        {
+          juegos.map(juego => (
+            <li key={juego.id}>{juego.titulo} | {juego.descripcion} <button>X</button></li>
+          ))
+        }
       </ul>
       <h3>Add Game</h3>
       <form onSubmit={conseguirDatos}>
