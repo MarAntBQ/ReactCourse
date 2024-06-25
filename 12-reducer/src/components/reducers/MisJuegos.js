@@ -39,6 +39,14 @@ export const MisJuegos = () => {
       payload: id
     }
     dispatch(acccion);
+
+    const acccion = {
+      type: 'crear',
+      payload: juego
+    }
+    dispatch(acccion);
+
+    console.log(juegos);
   }
 
   return (
