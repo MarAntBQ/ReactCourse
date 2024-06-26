@@ -43,6 +43,20 @@ export const MisJuegos = () => {
     console.log(juegos);
   }
 
+  const editar = (e,id) =>{
+    let juego = {
+      id: id,
+      titulo: e.target.value,
+      descripcion: e.target.value
+    }
+
+    const action = {
+      type: 'editar',
+      payload: juego
+    }
+    dispatch(action);
+  }
+
   return (
     <div>
       <h1> Estos son mis Vídeo Juegos</h1>
@@ -50,7 +64,16 @@ export const MisJuegos = () => {
       <ul>
         {
           juegos.map(juego => (
-            <li key={juego.id}>{juego.titulo} | {juego.descripcion} <button onClick={e => borrarJuego(juego.id)}>X</button></li>
+            <li key={juego.id}>{juego.titulo}
+            &nbsp;
+            <button onClick={e => borrarJuego(juego.id)}>X</button>
+            &nbsp;
+            <input
+              type='text'
+              onBlur={e => editar(e, juego.id)}
+              onInput={e => editar(e, juego.id)}
+            />
+            </li>
           ))
         }
       </ul>
