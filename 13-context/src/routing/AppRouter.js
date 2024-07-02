@@ -10,6 +10,19 @@ import { Error } from '../components/Error';
 export const AppRouter = () => {
   return (
     <BrowserRouter>
+        <header>
+          <nav>
+          <div id="logo"><h2>Learning ReactContext</h2></div>
+            <ul>
+              <li><NavLink to='/'>Home</NavLink></li>
+              <li><NavLink to='/about'>About</NavLink></li>
+              <li><NavLink to='/articles'>Articles</NavLink></li>
+              <li><NavLink to='/contact'>Contact</NavLink></li>
+              <li><NavLink to='/login'>Login</NavLink></li>
+            </ul>
+          </nav>
+        </header>
+        <main className='content'>
         <Routes>
             <Route path='/'  element={<Home/>}></Route>
             <Route path='/home'  element={<Home/>}></Route>
@@ -19,6 +32,7 @@ export const AppRouter = () => {
             <Route path='/login'  element={<Login/>}></Route>
             <Route path='*'  element={<Error/>}></Route>
         </Routes>
+        </main>
     </BrowserRouter>
   )
 }

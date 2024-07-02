@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Error = () => {
   return (
-    <div>Error</div>
+    <div>
+      <h1>404 Error: Page Not Found</h1>
+    </div>
   )
 }

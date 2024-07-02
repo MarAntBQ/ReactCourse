@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Login = () => {
   return (
-    <div>Login</div>
+    <div>
+      <h1>Welcome to the Login Page</h1>
+    </div>
   )
 }
