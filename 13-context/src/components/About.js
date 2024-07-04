@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <div>
       <h1>Welcome to the About Page</h1>
-      <p>Author: <strong>{dataFromContext.author}</strong></p>
+      {/* <p>Author: <strong>{dataFromContext.author}</strong></p> */}
     </div>
   )
 }

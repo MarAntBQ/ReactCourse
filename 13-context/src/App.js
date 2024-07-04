@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import './App.css';
 import { PruebaContext } from './context/PruebaContext';
 import { AppRouter } from './routing/AppRouter';
 
 function App() {
+
+  const [usuario, setUsuario] = useState({nombre: "Marco Antonio", web: "marantbq.dev"});
 
   const course = {
     id: 1,
@@ -13,7 +16,9 @@ function App() {
 
   return (
     <div className="App">
-      <PruebaContext.Provider value={course}>
+      <PruebaContext.Provider value={{
+        usuario,setUsuario
+      }}>
         <AppRouter />
       </PruebaContext.Provider>
     </div>
