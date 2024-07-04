@@ -5,7 +5,11 @@ import { AppRouter } from './routing/AppRouter';
 
 function App() {
 
-  const [usuario, setUsuario] = useState({nombre: "Marco Antonio", web: "marantbq.dev"});
+  const [usuario, setUsuario] = useState({
+    nombre: "Marco Antonio",
+    username: "MarAntBQ",
+    web: "marantbq.dev"
+  });
 
   const course = {
     id: 1,
