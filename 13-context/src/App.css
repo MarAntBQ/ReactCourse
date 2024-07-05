@@ -53,3 +53,35 @@ body {
     font-size: 1.5rem;
   }
 }
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+    &:hover {
+      background: darkorange;
+    }
+  }
+}

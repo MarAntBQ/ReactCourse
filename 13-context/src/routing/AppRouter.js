@@ -20,17 +20,13 @@ export const AppRouter = () => {
               <li><NavLink to='/about'>About</NavLink></li>
               <li><NavLink to='/articles'>Articles</NavLink></li>
               <li><NavLink to='/contact'>Contact</NavLink></li>
-              {usuario.username !==null ?
+              {usuario.hasOwnProperty("username") && usuario.username !==null ?
               (
                 <>
               <li><NavLink to='/'>{usuario.username}</NavLink></li>
               <li><a href='#' onClick={e => {
                 e.preventDefault();
-                setUsuario({
-                  username: null,
-                  nombre: "Marco Antonio",
-                  web: "marantbq.dev"
-                })
+                setUsuario({})
               }}>Logout</a></li>
               </>
             )
