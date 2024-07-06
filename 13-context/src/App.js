@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { PruebaContext } from './context/PruebaContext';
 import { AppRouter } from './routing/AppRouter';
 
 function App() {
 
-  const [usuario, setUsuario] = useState({
-    nombre: "Marco Antonio",
-    username: "MarAntBQ",
-    web: "marantbq.dev"
-  });
+  const [usuario, setUsuario] = useState({});
+
+  useEffect(() => {
+    let usuarioLocal = localStorage.getItem('usuario');
+    setUsuario(JSON.parse(usuarioLocal));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('usuario', JSON.stringify(usuario));
+  }, [usuario])
+
 
   const course = {
     id: 1,
