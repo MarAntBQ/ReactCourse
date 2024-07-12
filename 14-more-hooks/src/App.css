@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  color: skyblue;
+  text-decoration: dotted underline;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background: green;
+    color: white;
+  }
+}
