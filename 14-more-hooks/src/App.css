@@ -47,3 +47,42 @@ a {
     color: white;
   }
 }
+
+.my-form {
+  max-width: 600px;
+  min-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  input,
+  button,
+  textarea {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: inherit;
+  }
+  input,
+  textarea {
+    display: block;
+    margin: 10px 0;
+    border: 1px solid skyblue;
+    font-size: 16px;
+    text-align: center;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    margin-top: 5px;
+    cursor: pointer;
+    max-width: 200px;
+    background: skyblue;
+    font-weight: bold;
+    border: 0;
+    transition: 0.3s;
+    &:hover {
+      background: gray;
+    }
+  }
+}
