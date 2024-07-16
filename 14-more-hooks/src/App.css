@@ -48,11 +48,12 @@ a {
   }
 }
 
-pre {
-  max-width: 600px;
+.code {
+  /* max-width: 600px;
   min-width: 600px;
   width: 100%;
-  overflow-x: auto;
+  overflow-x: auto; */
+  font-size: 12px;
 }
 
 .my-form {
