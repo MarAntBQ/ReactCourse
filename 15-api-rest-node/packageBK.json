@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "install-express": "npm install express --save",
+    "install-mongoose": "npm install mongoose --save",
+    "install-validator": "npm install validator --save",
+    "install-cors": "npm install cors --save",
+    "install-nodemon": "npm install nodemon --save-dev"
   },
   "author": "MarAntBQ.dev",
   "license": "ISC",
