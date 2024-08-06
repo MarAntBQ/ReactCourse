@@ -1,14 +1,24 @@
-console.log('Hello, world from Node.js!');
+const {connection} = require('./database/connection');
+const express = require('express');
+const cors = require('cors');
 
-const http = require('http');
+console.log("Node App Started");
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Servidor funcionando en el puerto 3000\n');
-});
+connection();
 
-const PORT = 3000;
-server.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
-});
+// Create Node Server
+const app = express();
+
+// Setup Cors
+app.use(cors());
+
+// Convert body to JSON
+app.use(express.json())
+
+// Setup Routes
+const indexRouter = require('./routes/index');
+app.use(indexRouter);
+
+
+// Create server and listen requests
+app.listen(3002);
