@@ -21,4 +21,4 @@ app.use(indexRouter);
 
 
 // Create server and listen requests
-app.listen(3002);
+app.listen(6896);
