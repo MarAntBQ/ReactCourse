@@ -14,6 +14,7 @@ app.use(cors());
 
 // Convert body to JSON
 app.use(express.json())
+app.use(express.urlencoded({ extended: true })); // If text is sent from the form
 
 // Import Models
 

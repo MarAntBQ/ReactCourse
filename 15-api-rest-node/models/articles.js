@@ -17,7 +17,6 @@ const ArticleSchema = Schema({
     image: {
         type: String,
         default: "default.png",
-        required: true
     }
 });
 
