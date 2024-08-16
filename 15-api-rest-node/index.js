@@ -15,10 +15,15 @@ app.use(cors());
 // Convert body to JSON
 app.use(express.json())
 
+// Import Models
+
+
 // Setup Routes
 const indexRouter = require('./routes/index');
+const articleRouter = require('./routes/articles');
 app.use(indexRouter);
+app.use('/articles', articleRouter);
 
 
 // Create server and listen requests
-app.listen(6896);
+app.listen(80);
