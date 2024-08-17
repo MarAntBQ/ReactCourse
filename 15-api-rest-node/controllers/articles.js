@@ -8,7 +8,7 @@ exports.getTest = (req, res) => {
     });
 }
 
-exports.postSaveArticle = (req, res) => {
+exports.postSaveArticle = async (req, res) => {
     // Get all data from the request body
     console.log(req.body);
     const { title, content, image } = req.body;
@@ -31,18 +31,20 @@ exports.postSaveArticle = (req, res) => {
         });
     }
     // Create a new article object
-    const article = new ArticleModel({
-        title: title,
-        content: content,
-        image: image
-    });
+    const article = new ArticleModel(req.body);
     // Assign the data to the article object
 
     // Save the article object to the database
-
-
-    return res.status(200).json({
-        message: "Article saved successfully",
-        articleCreated: article
-    });
+    try {
+        const articleSaved = await article.save();
+        return res.status(200).json({
+            message: "Article saved",
+            articleCreated: articleSaved
+        });
+    } catch (error) {
+        return res.status(400).json({
+            status: "error",
+            message: "There was an error saving the article",
+        });
+    }
 }
